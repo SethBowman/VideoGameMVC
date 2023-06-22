@@ -15,5 +15,11 @@ namespace VideoGameMVC.Controllers
             var games = _repo.GetAllGames();
             return View(games);
         }
+
+        public IActionResult ViewGame(int id)
+        {
+            var game = _repo.GetGame(id);
+            return View(game);
+        }
     }
 }

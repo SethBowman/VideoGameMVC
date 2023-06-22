@@ -15,5 +15,10 @@ namespace VideoGameMVC
 		{
 			return _conn.Query<Game>("select * from games");
 		}
-	}
+
+        public Game GetGame(int id)
+        {
+            return _conn.QuerySingle<Game>("select * from games where id = @id", new { id = id });
+        }
+    }
 }

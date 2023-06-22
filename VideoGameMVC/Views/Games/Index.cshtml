@@ -13,7 +13,7 @@
     @foreach (var game in @Model)
     {
         <tr>
-            <td>@game.Id</td>
+            <td><a href=/Games/ViewGame/@game.Id>@game.Id</a></td>
             <td>@game.Title</td>
             <td>@game.Genre</td>
             <td>@game.Release_Year</td>
