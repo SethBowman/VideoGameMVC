@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Game>
+
+<h2>Games</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Release Year</th>
+        <th>Platfrom</th>       
+    </tr>
+
+    @foreach (var game in @Model)
+    {
+        <tr>
+            <td>@game.Id</td>
+            <td>@game.Title</td>
+            <td>@game.Genre</td>
+            <td>@game.Release_Year</td>
+            <td>@game.Platform</td>           
+        </tr>
+    }
+
+</table>
