@@ -41,8 +41,12 @@ namespace VideoGameMVC.Controllers
             return RedirectToAction("ViewGame", new { id = game.Id });
         }
 
-        public IActionResult AddGame(Game gameToAdd) 
-        {            
+        public IActionResult AddGame(Game gameToAdd)
+        {
+            if (gameToAdd == null)
+            {
+                return View("GameNotFound");
+            }
             return View(gameToAdd);
         }
 
@@ -54,6 +58,10 @@ namespace VideoGameMVC.Controllers
 
         public IActionResult DeleteGame(Game game)
         {
+            if (game == null)
+            {
+                return View("GameNotFound");
+            }
             _repo.RemoveGame(game);
             return RedirectToAction("Index");
 
