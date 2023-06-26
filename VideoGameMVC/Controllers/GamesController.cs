@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using VideoGameMVC.Models;
 
 namespace VideoGameMVC.Controllers
 {
@@ -20,6 +21,24 @@ namespace VideoGameMVC.Controllers
         {
             var game = _repo.GetGame(id);
             return View(game);
+        }
+
+        public IActionResult UpdateGame(int id)
+        {
+            Game game = _repo.GetGame(id);
+
+            if(game == null)
+            {
+                return View("GameNotFound");
+            }
+            return View(game);
+        }
+
+        public IActionResult UpdateGameToDatabase(Game game)
+        {
+            _repo.UpdateGame(game);
+
+            return RedirectToAction("ViewGame", new { id = game.Id });
         }
     }
 }

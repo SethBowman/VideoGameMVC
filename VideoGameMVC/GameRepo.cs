@@ -20,5 +20,11 @@ namespace VideoGameMVC
         {
             return _conn.QuerySingle<Game>("select * from games where id = @id", new { id = id });
         }
+
+        public void UpdateGame(Game game)
+        {
+            _conn.Execute("update games set title = @title, genre = @genre, release_year = @releaseYear, platform = @platform where id = @Id",
+                new {title = game.Title, genre = game.Genre, releaseYear = game.Release_Year, platform = game.Platform, Id = game.Id});
+        }
     }
 }

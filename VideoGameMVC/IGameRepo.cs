@@ -6,5 +6,6 @@ namespace VideoGameMVC
 	{
 		public IEnumerable<Game> GetAllGames();
 		public Game GetGame(int id);
+		public void UpdateGame(Game game);
 	}
 }
