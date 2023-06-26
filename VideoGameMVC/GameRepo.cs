@@ -11,6 +11,13 @@ namespace VideoGameMVC
         {
             _conn = conn;
         }
+     
+        public void AddGame(Game gameToAdd)
+        {
+            _conn.Execute("insert into games (title, genre, release_year, platform) values (@title, @genre, @releaseYear, @platform)",
+                new { title = gameToAdd.Title, genre = gameToAdd.Genre, releaseYear = gameToAdd.Release_Year, platform = gameToAdd.Platform });
+        }
+
         public IEnumerable<Game> GetAllGames()
 		{
 			return _conn.Query<Game>("select * from games");
@@ -21,10 +28,16 @@ namespace VideoGameMVC
             return _conn.QuerySingle<Game>("select * from games where id = @id", new { id = id });
         }
 
+        public void RemoveGame(Game gameToRemove)
+        {
+            _conn.Execute("DELETE from games where id = @id", new { id = gameToRemove.Id });
+        }
+
         public void UpdateGame(Game game)
         {
             _conn.Execute("update games set title = @title, genre = @genre, release_year = @releaseYear, platform = @platform where id = @Id",
                 new {title = game.Title, genre = game.Genre, releaseYear = game.Release_Year, platform = game.Platform, Id = game.Id});
         }
+
     }
 }

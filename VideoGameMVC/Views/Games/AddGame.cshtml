@@ -1,0 +1,23 @@
+﻿@model Game
+
+<h2>Create a New Game</h2>
+
+@using (Html.BeginForm("AddGameToDatabase", "Games", "Post"))
+{
+    <input asp-for="Id" type="hidden" value="" />
+
+    <label asp-for="Title" class="control-label">Title</label>
+    <input type="text" name="Title" class="form-control" value="Title" />
+
+    <label asp-for="Genre" class="control-label">Genre</label>
+    <input type="text" name="Genre" class="form-control" value="Genre" />
+
+    <label asp-for="Release_Year" class="control-label">Release Year</label>
+    <input type="number" name="Realease_Year" class="form-control" value="2023" />
+
+    <label asp-for="Platform" class="control-label">Platform</label>
+    <input type="text" name="Platform" class="form-control" value="Platform" />
+    
+
+    <input type="submit" value="Create Game" class="btn btn-primary" />
+}

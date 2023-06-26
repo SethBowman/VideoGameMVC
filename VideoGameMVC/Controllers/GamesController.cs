@@ -40,5 +40,23 @@ namespace VideoGameMVC.Controllers
 
             return RedirectToAction("ViewGame", new { id = game.Id });
         }
+
+        public IActionResult AddGame(Game gameToAdd) 
+        {            
+            return View(gameToAdd);
+        }
+
+        public IActionResult AddGameToDatabase(Game game) 
+        {
+            _repo.AddGame(game);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteGame(Game game)
+        {
+            _repo.RemoveGame(game);
+            return RedirectToAction("Index");
+
+        }
     }
 }
