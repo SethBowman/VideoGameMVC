@@ -13,7 +13,7 @@
     <input type="text" name="Genre" class="form-control" value="@Model.Genre" />
 
     <label asp-for="Release_Year" class="control-label">Release Year</label>
-    <input type="text" name="Release_Year" class="form-control" value="@Model.Release_Year" />
+    <input type="number" step="0.01" name="Release_Year" class="form-control" value="@Model.Release_Year"/>
 
     <label asp-for="Platform" class="control-label">Platform</label>
     <input type="text" name="Platform" class="form-control" value="@Model.Platform" />
