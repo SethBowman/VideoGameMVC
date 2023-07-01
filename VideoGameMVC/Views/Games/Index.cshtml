@@ -12,7 +12,8 @@
         <th>Title</th>
         <th>Genre</th>
         <th>Release Year</th>
-        <th>Platform</th>       
+        <th>Platform</th>
+        <th>Image</th>
     </tr>
 
     @foreach (var game in @Model)
@@ -22,7 +23,8 @@
             <td>@game.Title</td>
             <td>@game.Genre</td>
             <td>@game.Release_Year</td>
-            <td>@game.Platform</td>           
+            <td>@game.Platform</td>
+            <td><img src="@game.ImageURL" style="height: 40px; width:auto;" /></td>
         </tr>
     }
 

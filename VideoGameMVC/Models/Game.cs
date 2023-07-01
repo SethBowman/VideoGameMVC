@@ -7,5 +7,6 @@
         public string Genre { get; set; }
         public int Release_Year { get; set; }
         public string Platform { get; set; }
+        public string ImageURL { get; set; }
     }
 }

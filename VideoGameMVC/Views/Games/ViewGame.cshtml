@@ -8,14 +8,16 @@
         <th>Title</th>
         <th>Genre</th>
         <th>Release Year</th>
-        <th>Platform</th>      
+        <th>Platform</th> 
+        <th>Image</th>
     </tr>
     <tr>
         <td>@Model.Id</td>
         <td>@Model.Title</td>
         <td>@Model.Genre</td>
         <td>@Model.Release_Year</td>
-        <td>@Model.Platform</td>       
+        <td>@Model.Platform</td>   
+        <td><img src="@Model.ImageURL" style="height: 60px; width:auto;" /></td>
     </tr>
 </table>
 
@@ -31,3 +33,4 @@
         <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Game" />
     }
 </div>
+
