@@ -8,21 +8,31 @@
         <th>Title</th>
         <th>Genre</th>
         <th>Release Year</th>
-        <th>Platform</th> 
-        <th>Image</th>
+        <th>Platform</th>         
     </tr>
     <tr>
         <td>@Model.Id</td>
         <td>@Model.Title</td>
         <td>@Model.Genre</td>
         <td>@Model.Release_Year</td>
-        <td>@Model.Platform</td>   
-        <td><img src="@Model.ImageURL" style="height: 60px; width:auto;" /></td>
+        <td>@Model.Platform</td>
     </tr>
 </table>
 
+
+<div class="text-center">
+    <img src="@Model.ImageURL" style="height:300px; width: auto; border-radius: 7px;" />
+</div>
+
+<section style="display:flex; flex-direction: row; justify-content: space-between;">
+
 <div style="display: block">
-    <a href="/Games/UpdateGame/@Model.Id">Update this Game</a>
+
+    @using (Html.BeginForm("UpdateGame", "Games", "Post"))
+    {
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+        <input class="btn-success" type="submit" onclick="return confirm('Update this game?')" value="Update this Game" />
+    }
 </div>
 
 <div style="display: block">
@@ -30,7 +40,9 @@
     @using (Html.BeginForm("DeleteGame", "Games", "Post"))
     {
         <input type="hidden" asp-for="Id" value="@Model.Id" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Game" />
+        <input class="btn-danger" type="submit" onclick="return confirm('Are you sure?')" value="Delete this Game" />
     }
 </div>
+</section>
+
 
