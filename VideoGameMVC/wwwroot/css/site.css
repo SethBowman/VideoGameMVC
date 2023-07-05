@@ -39,5 +39,9 @@ a {
 }
 
 footer {
-    background-color: black;
+    background-color: white;
+}
+
+h1, h2, table, ul, p, a, * {
+    font-family: "Audiowide", sans-serif;
 }
