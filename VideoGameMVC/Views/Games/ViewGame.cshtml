@@ -24,23 +24,23 @@
     <img src="@Model.ImageURL" style="height:300px; width: auto; border-radius: 7px; box-shadow: 0 10px 10px 0 rgba(10, 11, 14, 0.6);" />
 </div>
 
-<section style="display:flex; flex-direction: row; justify-content: space-between;">
+<section style="display:flex; flex-direction: row; justify-content: space-between; justify-content: center; padding: 25px;">
 
-<div style="display: block">
+<div style="display: block; padding-right: 10px">
 
     @using (Html.BeginForm("UpdateGame", "Games", "Post"))
     {
         <input type="hidden" asp-for="Id" value="@Model.Id" />
-        <input class="btn-success" type="submit" onclick="return confirm('Update this game?')" value="Update this Game" />
+        <input class="btn-primary" type="submit" onclick="return confirm('Update this game?')" value="Update this Game" style="border-radius: 10px;" />
     }
 </div>
 
-<div style="display: block">
+<div style="display: block; padding-left: 10px">
 
     @using (Html.BeginForm("DeleteGame", "Games", "Post"))
     {
         <input type="hidden" asp-for="Id" value="@Model.Id" />
-        <input class="btn-danger" type="submit" onclick="return confirm('Are you sure?')" value="Delete this Game" />
+            <input class="btn-danger" type="submit" onclick="return confirm('Are you sure?')" value="Delete this Game" style="border-radius: 10px;"/>
     }
 </div>
 </section>
