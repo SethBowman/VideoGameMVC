@@ -18,20 +18,23 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  background-color: dimgrey;
-  color: white;
+    margin-bottom: 60px;
+    background: rgb(159,203,244);
+    background: linear-gradient(149deg, rgba(159,203,244,1) 0%, rgba(255,235,235,1) 25%, rgba(255,255,255,1) 59%, rgba(232,229,186,1) 80%);
 }
 
 table {
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: aliceblue;
     opacity: 95%;
 }
 
 a {
     text-decoration: none;
     color: deepskyblue;
+}
+a:hover {
+    color: lightpink;
 }
 
 #anchors {
