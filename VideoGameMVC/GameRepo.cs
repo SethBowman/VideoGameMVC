@@ -14,8 +14,8 @@ namespace VideoGameMVC
      
         public void AddGame(Game gameToAdd)
         {
-            _conn.Execute("insert into games (title, genre, release_year, platform) values (@title, @genre, @releaseYear, @platform)",
-                new { title = gameToAdd.Title, genre = gameToAdd.Genre, releaseYear = gameToAdd.Release_Year, platform = gameToAdd.Platform });
+            _conn.Execute("insert into games (title, genre, release_year, platform, ImageURL) values (@title, @genre, @releaseYear, @platform, @imageURL)",
+                new { title = gameToAdd.Title, genre = gameToAdd.Genre, releaseYear = gameToAdd.Release_Year, platform = gameToAdd.Platform, imageURL = gameToAdd.ImageURL });
         }
 
         public IEnumerable<Game> GetAllGames()
@@ -35,8 +35,8 @@ namespace VideoGameMVC
 
         public void UpdateGame(Game game)
         {
-            _conn.Execute("update games set title = @title, genre = @genre, release_year = @releaseYear, platform = @platform where id = @Id",
-                new {title = game.Title, genre = game.Genre, releaseYear = game.Release_Year, platform = game.Platform, Id = game.Id});
+            _conn.Execute("update games set title = @title, genre = @genre, release_year = @releaseYear, platform = @platform, ImageURL = @imageURL where id = @Id",
+                new {title = game.Title, genre = game.Genre, releaseYear = game.Release_Year, platform = game.Platform, imageURL = game.ImageURL, Id = game.Id });
         }
 
     }
