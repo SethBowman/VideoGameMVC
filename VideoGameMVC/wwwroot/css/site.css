@@ -48,3 +48,17 @@ footer {
 h1, h2, table, ul, p, a, * {
     font-family: "Audiowide", sans-serif;
 }
+
+#indexImg {
+    height: 40px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 10px 10px 0 rgba(10, 11, 14, 0.6);
+}
+
+#viewImg {
+    height: 300px;
+    width: auto;
+    border-radius: 7px;
+    box-shadow: 0 10px 10px 0 rgba(10, 11, 14, 0.6);
+}
