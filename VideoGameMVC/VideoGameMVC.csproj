@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.143" />
-    <PackageReference Include="MySql.Data" Version="8.0.33" />
+    <Compile Remove="Views\Games\images\**" />
+    <Content Remove="Views\Games\images\**" />
+    <EmbeddedResource Remove="Views\Games\images\**" />
+    <None Remove="Views\Games\images\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Games\images\" />
+    <PackageReference Include="Dapper" Version="2.0.143" />
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 
 </Project>

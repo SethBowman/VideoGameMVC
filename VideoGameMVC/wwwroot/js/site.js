@@ -2,10 +2,10 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-let response = prompt("Please enter your name:")
-if (response == null || response == "") {
-    document.getElementById("welcome").innerHTML = `Welcome, Guest!`
-}
-else {
-    document.getElementById("welcome").innerHTML = `Welcome, ${response}!`
-}
+//let response = prompt("Please enter your name:")
+//if (response == null || response == "") {
+//    document.getElementById("welcome").innerHTML = `Welcome, Guest!`
+//}
+//else {
+//    document.getElementById("welcome").innerHTML = `Welcome, ${response}!`
+//}
