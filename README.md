@@ -115,6 +115,8 @@ Video Game App is a web application developed using C#, ASP.NET Core MVC, and My
 
 For any inquiries or feedback, please reach out to [sbowman@truecoders.io].
 
+## Screenshots 
+
 ![index](https://github.com/SethBowman/VideoGameMVC/assets/81124768/272aa6af-eb21-4f62-98ea-4beab8d889ed)
 
 ![view](https://github.com/SethBowman/VideoGameMVC/assets/81124768/64d2ea1c-1133-40c0-9742-509fb62e16d0)
